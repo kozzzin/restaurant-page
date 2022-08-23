@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+
+:root,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    min-height: 100vh;
+    width: 100vw;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+}
+
+
+
+/* body::before {
+    content: 'HUJ';
+    display: block;
+
+    opacity: 0.8;
+} */
+
+.main-container {
+    background-image: url('./img/main-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment:fixed;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    align-content:stretch;
+    align-items: center;
+    overflow: scroll;
+    transition: background-image 1s;
+}
+
+.menu-bg {
+    background-image: url('./img/menu-bg.jpg');
+}
+
+.contacts-bg {
+    background-image: url('./img/contacts-bg.jpg');
+}
+
+#content {
+    display: grid;
+    grid-template-rows: 1fr 7fr 2fr;
+    grid-template-columns: 1fr;
+    max-height: 100vh;
+    box-sizing: border-box;
+    justify-content: center;
+    /* grid-auto-flow: row; */
+}
+
+
+.main-container::after {
+    content: '';
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 0;
+}
+
+header {
+    z-index: 10;
+    height: 100px;
+    grid-row: 1/2;
+}
+
+#menu {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 20px;
+}
+
+#menu li {
+    display: inline-block;
+}
+
+#menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color 0.3s;
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#menu li a:hover {
+    color: #ffc774;
+}
+
+#menu a.active {
+    font-weight: 900;
+    color: #ffc774;
+    font-style: italic;
+}
+
+main {
+    transition: opacity 0.4s;
+}
+
+.hide,
+footer .hide {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+footer .show {
+    opacity: 0.7;
+}
+
+main.main-content {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    align-content: top;
+    flex-wrap: wrap;
+    z-index: 1;
+    grid-row: 2/-2;
+    /* max-height: 50vh; */
+    max-height: 100%;
+    /* overflow: visible; */
+    /*width: 100%; */
+
+}
+
+
+.teaser-logo {
+    display: block;
+    font-size: max(4rem,10vw);
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+    flex: 100%;
+    max-width: 80%;
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+    font-weight: 900;
+    transition: all 0.5s;
+    padding: 25px;
+}
+
+
+.main-content p {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+}
+
+
+
+.dish-card {
+    display: grid;
+    grid-template-rows: 5fr 2fr;
+    justify-items: center;
+    text-align: center;
+    margin: 15px;
+}
+
+
+
+.dish-card img {
+max-width: 45vh;
+   filter: drop-shadow(0 0 25px rgba(0,0,0,0.9));
+
+}
+
+
+.dish-description h3 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 15px 15px 0;
+    font-style: italic;
+}
+
+.dish-description p {
+    font-size: 1.5rem;
+    padding: 15px;
+    font-style: italic;
+}
+
+.bottom-logo {
+    width: 100%;
+    text-align: center;
+    grid-column: 1/-1;
+    opacity: 0.7;
+    transition: opacity 0.4s;
+}
+
+.bottom-logo h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.bottom-logo span {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1.8rem;
+    padding-left: 1.8rem;
+}
+
+
+footer {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    align-self: flex-end;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
