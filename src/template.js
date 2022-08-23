@@ -52,3 +52,7 @@ export {
     footer
 }
 
+export {default as main} from './main';
+export {default as menu} from './menu';
+export {default as contacts} from './contacts';
+

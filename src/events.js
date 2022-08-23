@@ -1,7 +1,7 @@
-import { header, footer} from "./template";
-import main from "./main";
-import menu from "./menu";
-import contacts from "./contacts";
+import { header, footer, main, menu, contacts} from "./template";
+// import main from "./main";
+// import menu from "./menu";
+// import contacts from "./contacts";
 
 function animateFade(toDo) {
     const main = document.querySelector('main');
