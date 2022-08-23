@@ -179,10 +179,16 @@ main.main-content {
 
 
 .dish-card img {
-max-width: 45vh;
-   filter: drop-shadow(0 0 25px rgba(0,0,0,0.9));
-
+    max-width: 45vh;
+    filter: drop-shadow(0 0 25px rgba(0,0,0,0.9));
+    transition: all 0.4s;
 }
+
+.dish-card img:hover {
+    max-width: 70vh;
+}
+
+
 
 
 .dish-description h3 {
